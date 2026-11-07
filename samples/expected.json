@@ -1,0 +1,42 @@
+{
+  "01_clean_intrastate.pdf": {
+    "expected_verdict": "ITC_ELIGIBLE",
+    "expected_flags": "No issues"
+  },
+  "02_bad_gstin_checksum.pdf": {
+    "expected_verdict": "ITC_AT_RISK",
+    "expected_flags": "SUPPLIER_GSTIN_CHECKSUM"
+  },
+  "03_igst_on_intrastate.pdf": {
+    "expected_verdict": "ITC_AT_RISK",
+    "expected_flags": "TAX_TYPE_MISMATCH"
+  },
+  "04_cgst_sgst_on_interstate.pdf": {
+    "expected_verdict": "ITC_AT_RISK",
+    "expected_flags": "TAX_TYPE_MISMATCH"
+  },
+  "05_total_mismatch.pdf": {
+    "expected_verdict": "ITC_AT_RISK",
+    "expected_flags": "TOTAL_MISMATCH"
+  },
+  "06_long_invoice_number.pdf": {
+    "expected_verdict": "ITC_AT_RISK",
+    "expected_flags": "INV_NO_FORMAT"
+  },
+  "07_itc_time_barred_2024.pdf": {
+    "expected_verdict": "ITC_AT_RISK",
+    "expected_flags": "ITC_TIME_BAR (Sec 16(4))"
+  },
+  "08_hotel_food_sec17_5.pdf": {
+    "expected_verdict": "ITC_BLOCKED",
+    "expected_flags": "Sec 17(5) via RAG (food/catering)"
+  },
+  "09_missing_irn_hsn.pdf": {
+    "expected_verdict": "ITC_AT_RISK",
+    "expected_flags": "HSN_MISSING, IRN_ABSENT"
+  },
+  "10_scanned_clean.png": {
+    "expected_verdict": "ITC_ELIGIBLE",
+    "expected_flags": "OCR path test"
+  }
+}
